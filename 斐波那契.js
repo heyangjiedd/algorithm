@@ -40,9 +40,8 @@ let obj = {
 // 生成器生成
 function* f1(index = 1, len = 10) {
     if (index < len) {
-        let result =  yield index
-        yield* f1(index+result)
+        yield index
+        yield* f1(++index)
     }
 }
-
 console.log([...f1(1)])
