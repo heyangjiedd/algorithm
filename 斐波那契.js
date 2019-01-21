@@ -10,8 +10,10 @@ function f(start = 0, len = 10, arr = []) {
     }
     return arr
 }
+console.log(new Date())
+console.log(f())
+console.log(new Date())
 
-// console.log(f())
 //迭代器生成
 let obj = {
     [Symbol.iterator]() {
@@ -38,10 +40,15 @@ let obj = {
 }
 // console.log([...obj])
 // 生成器生成
-function* f1(index = 1, len = 10) {
+function* f1(index = 1,preindex = 0, len = 100) {
     if (index < len) {
-        yield index
-        yield* f1(++index)
+        let curr = index;
+        index = index+preindex
+        yield index;
+        preindex = curr;
+        yield* f1(index,preindex)
     }
 }
-console.log([...f1(1)])
+console.log(new Date())
+console.log([...f1(1,0)])
+console.log(new Date())
