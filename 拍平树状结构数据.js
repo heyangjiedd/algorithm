@@ -1,4 +1,4 @@
-let arr = [1, [432, [324]], 2, 3, 5, [4, 4, 5, [5, 65, 23]]]
+let arr = [1, [432, [324]], 2, 3, 5, [4, 4, 5, [5, 65, 23,[13,32,52]]]]
 let arrChildren = [{
     id: 1,
     children: [{
@@ -60,5 +60,12 @@ function* yyy(data) {
     }
 }
 
-console.log([...yyy(arrChildren)])
-console.log(TreeData(arr))
+// console.log([...yyy(arrChildren)])
+// console.log(TreeData(arr))
+function flatten(arr) {
+    while (arr.some(item=>Array.isArray(item))){
+        arr = [].concat(...arr)
+    }
+    return arr
+}
+console.log(flatten(arr))
