@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--行内、块级元素居中-->
+    <div style="text-align: center;">
+        <span>块级元素包含行内元素</span>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block;">块级元素包含块级元素</div>
+    </div>
+    <div>
+        <div style="width: 100px;margin: 0 auto">子元素定宽</div>
+    </div>
+    <div>
+        <div style="display: table;margin: 0 auto">表格布局</div>
+    </div>
+    <div style="position: relative">
+        <div style="position: absolute;left: 50%;transform: translate(-50%)">绝对定位+transform</div>
+    </div>
+    <br>
+    <div style="display: flex;justify-content: center">
+        <div>flex布局---justify-content</div>
+    </div>
+    <div style="display: flex;">
+        <div style="margin: 0 auto">flex布局---margin</div>
+    </div>
+    <!--多级块级元素居中-->
+    <div style="display: flex;justify-content: center">
+        <div>123</div>
+        <div>234</div>
+    </div>
+    <div style="text-align: center;">
+        <div style="display: inline-block">123</div>
+        <div style="display: inline-block">234</div>
+    </div>
+    <!--浮动元素居中-->
+    <div>
+        <span style="float: left;width: 150px;position: relative;left: 50%;margin-left: -75px">定宽非浮动元素</span>
+    </div>
+    <br>
+    <div style="float: left;position: relative;left: 50%">
+        <p style="float: left;position: relative;right: 50%">都是浮动</p>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div style="display: flex;justify-content: center">
+        <span style="float: left">居中</span>
+    </div>
+    <div style="position: relative;">
+        <div style="position: absolute;width:100px;background: aliceblue;margin: 0 auto;left: 0;right: 0">绝对定位居中
+        </div>
+    </div>
+    <br>
+    <!--垂直居中-->
+    <div style="height: 50px;line-height: 50px;border: 2px dashed #f69c55;">
+        <span>水平居中</span>
+    </div>
+    <div style="height: 100px;display: flex;flex-direction: column;justify-content: center;border: 2px dashed #f69c55;">
+        <p>Dance like nobody is watching, code like everybody is.
+            Dance like nobody is watching, code like everybody is.
+            Dance like nobody is watching, code like everybody is.Dance like nobody is watching, code like everybody is.
+            Dance like nobody is watching, code like everybody is.
+            Dance like nobody is watching, code like everybody is.</p>
+    </div>
+    <div style="height: 100px;display: table;border: 2px dashed #f69c55;">
+        <p style="display: table-cell;vertical-align: middle">Dance like nobody is watching, code like everybody is.
+            Dance like nobody is watching, code like everybody is.
+            Dance like nobody is watching, code like everybody is.Dance like nobody is watching, code like everybody is.
+            Dance like nobody is watching, code like everybody is.
+            Dance like nobody is watching, code like everybody is.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div style="position: relative;border: 2px dashed #f69c55;height: 100px">
+        <div style="position: absolute;top: 50%;height: 50px;margin-top: -25px;border: 2px dashed #97ddf6;">使用absolute+负margin(已知高度宽度)</div>
+    </div>
+    <br>
+    <div style="position: relative;border: 2px dashed #f69c55;height: 50px">
+        <div style="position: absolute;top: 50%;transform: translateY(-50%);">使用absolute+transform</div>
+    </div>
+    <div style="display: flex;align-items: center;border: 2px dashed #f69c55;height: 100px">
+        <div>使用flex+align-items</div>
+    </div>
+    <div style="display: table-cell;vertical-align: middle;border: 2px dashed #f69c55;height: 100px">
+        <div>使用flex+align-items</div>
+    </div>
+    <br>
+    <!--水平垂直居中-->
+    <div style="position: relative;">
+        <div style="position: absolute;top: 50%;left: 50%;margin: -50px 0 0 -50px;
+width: 100px;height: 100px;background-color: #666">使用absolute+负margin(已知高度宽度)</div>
+    </div>
+    <div style="position: relative;height: 100px">
+        <div style="position: absolute;top: 0;left: 0;bottom: 0;right:0;margin: auto;
+width: 100px;height: 100px;background-color: #666">绝对定位与margin:auto（已知高度宽度）</div>
+    </div>
+    <div style="position: relative;">
+        <div style="position: absolute;top: 50%;left:  50%;transform: translate(-50%,-50%);
+width: 100px;height: 100px;background-color: #666">绝对定位+CSS3(未知元素的高宽)</div>
+    </div>
+    <div style="height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;">
+        <div >flex布局</div>
+    </div>
+    <div style="height: 100px;
+   display: flex;">
+        <div style="margin: auto">flex布局--</div>
+    </div>
+    <div style="height: 100px;
+   display: grid;">
+        <div style="margin: auto">table布局--</div>
+    </div>
+</head>
+<body>
+
+</body>
+</html>
