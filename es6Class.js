@@ -13,6 +13,14 @@ class b {
     constructor(props) {
 
     }
-
+    handler = ()=>{
+        return this
+    }
+    b = function(){
+        console.log(2342)
+    }
+    a(){
+        console.log(this.handler())
+    }
 }
-new a().handler()
+console.log(new b().b())

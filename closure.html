@@ -47,5 +47,23 @@
     // new Foo.getName()//2
     // new Foo().getName()//3
     // new new Foo().getName()//3
+    //原型实例
+    class b {
+        constructor(props) {
+
+        }
+        handler = ()=>{
+            return this
+        }
+        c=12
+        b = function(){
+            console.log(2342)
+        }
+        a(){
+            console.log(this.handler())
+        }
+    }
+    console.log(b)
+    console.log(new b())
 </script>
 </html>
