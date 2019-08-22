@@ -38,7 +38,7 @@ let obj = {
         }
     }
 }
-// console.log([...obj])
+// console.log([...obj])1
 // 生成器生成
 function* f1(index = 1,preindex = 0, len = 100) {
     if (index < len) {
