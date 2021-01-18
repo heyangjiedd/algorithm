@@ -52,3 +52,19 @@ function* f1(index = 1,preindex = 0, len = 100) {
 console.log(new Date())
 console.log([...f1(1,0)])
 console.log(new Date())
+
+function fn(start = 0, len = 100, arr = []) {
+  while (start <= len) {
+    if (start == 0) {
+      arr.push(start++);
+    } else if (start == 1) {
+      start = start + arr[arr.length - 1];
+      arr.push(1);
+    } else {
+      start = arr[arr.length - 2] + arr[arr.length - 1];
+      start <= len && arr.push(start);
+    }
+  }
+  return arr;
+}
+console.log(fn());
