@@ -97,7 +97,7 @@ function arrToTree(arr) {
         map[item.pid].children.push(item);
       } else {
         // 不存在上级节点，则创造一个上级节点，ps:循环到上级节点时，直接替换。
-        map[item.pid] = { id: item.pid, pid: null, children: [item] };
+        map[item.pid] = { id: item.pid, , children: [item] };
       }
       map[item.id] = Object.assign(item, map[item.id]); // 设置当前id的map，若存在创造的节点，则合并
     }
